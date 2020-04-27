@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tesoreria.cl/seguridad/profile" targetNamespace="http://tesoreria.cl/seguridad/profile" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:element name="users">
+		<xsd:complexType>
+			<xsd:sequence>
+             <xsd:element name="user" maxOccurs="unbounded">
+             <xsd:complexType>
+  			 <xsd:sequence>
+				<xsd:element name="userId" type="xsd:decimal" nillable="false"/>
+				<xsd:element name="userName" type="xsd:string" nillable="false"/>
+				<xsd:element name="fechaCreacion" type="xsd:string" nillable="false"/>
+                <xsd:element name="fechaMod" type="xsd:string" nillable="false"/>
+                <xsd:element name="password" type="xsd:string" nillable="true"/>
+                <xsd:element name="rut" type="xsd:decimal" nillable="true"/>
+                <xsd:element name="dv" type="xsd:string" nillable="true"/>
+                <xsd:element name="nombres" type="xsd:string" nillable="true"/>
+                <xsd:element name="apePaterno" type="xsd:string" nillable="true"/>
+                <xsd:element name="apeMaterno" type="xsd:string" nillable="true"/>
+                <xsd:element name="codUbicacion" type="xsd:decimal" nillable="true"/>
+                <xsd:element name="tesoreria" type="xsd:string" nillable="true"/>
+                <xsd:element name="rutTesoreria" type="xsd:decimal" nillable="true"/>
+                <xsd:element name="dvTesoreria" type="xsd:string" nillable="true"/>
+                <xsd:element name="depto" type="xsd:string" nillable="true"/>
+                <xsd:element name="seccion" type="xsd:string" nillable="true"/>
+                <xsd:element name="cargo" type="xsd:string" nillable="true"/>
+                <xsd:element name="funcion" type="xsd:string" nillable="true"/>
+                <xsd:element name="anexo" type="xsd:string" nillable="true"/>
+                <xsd:element name="estado" type="xsd:string" nillable="true"/>
+                <xsd:element name="email" type="xsd:string" nillable="true"/>
+              </xsd:sequence>
+            </xsd:complexType>
+   	        </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+   	</xsd:element>
+</xsd:schema>

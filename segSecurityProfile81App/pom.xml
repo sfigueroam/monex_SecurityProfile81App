@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cl.gob.tgr.monex</groupId>
+	<artifactId>segSecurityProfile81App</artifactId>
+	<version>1.0.0</version>
+	<packaging>ear</packaging>
+	
+	<repositories>
+		<repository>
+			<id>maven-group</id>
+			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
+		</repository>
+	</repositories>
+  
+  	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>hhttp://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
+		</repository>
+	</distributionManagement>
+	
+	
+	<build>
+		<finalName>segSecurityProfile81App</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<earSourceDirectory>EarContent</earSourceDirectory>
+					<version>6</version>
+					<defaultLibBundleDir>APP-INF/lib</defaultLibBundleDir>
+					<modules>
+						<ejbModule>
+							<groupId>cl.gob.tgr.monex</groupId>
+							<artifactId>PkgSeguridadIntranetEJB3</artifactId>
+							<bundleFileName>PkgSeguridadIntranetEJB3.jar</bundleFileName>
+						</ejbModule>
+						<ejbModule>
+							<groupId>cl.gob.tgr.monex</groupId>
+							<artifactId>SegFacadeIntranetEJB3</artifactId>
+							<bundleFileName>SegFacadeIntranetEJB3.jar</bundleFileName>
+						</ejbModule>
+					</modules>
+					<displayName>segSecurityProfile81App</displayName>
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>cl.gob.tgr.monex</groupId>
+			<artifactId>PkgSeguridadIntranetEJB3</artifactId>
+			<version>1.0.0</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>cl.gob.tgr.monex</groupId>
+			<artifactId>SegFacadeIntranetEJB3</artifactId>
+			<version>1.0.0</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+</project>
