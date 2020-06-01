@@ -26,12 +26,12 @@
 					<defaultLibBundleDir>APP-INF/lib</defaultLibBundleDir>
 					<modules>
 						<ejbModule>
-							<groupId>cl.gob.tgr.monex</groupId>
+							<groupId>cl.tesoresia.seguridad.profile</groupId>
 							<artifactId>PkgSeguridadIntranetEJB3</artifactId>
 							<bundleFileName>PkgSeguridadIntranetEJB3.jar</bundleFileName>
 						</ejbModule>
 						<ejbModule>
-							<groupId>cl.gob.tgr.monex</groupId>
+							<groupId>cl.tesoreria.seguridad.perfil</groupId>
 							<artifactId>SegFacadeIntranetEJB3</artifactId>
 							<bundleFileName>SegFacadeIntranetEJB3.jar</bundleFileName>
 						</ejbModule>
@@ -56,7 +56,7 @@
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>cl.gob.tgr.monex</groupId>
+			<groupId>cl.tesoreria.seguridad.perfil</groupId>
 			<artifactId>SegFacadeIntranetEJB3</artifactId>
 			<version>${project.version}</version>
 			<type>ejb</type>
