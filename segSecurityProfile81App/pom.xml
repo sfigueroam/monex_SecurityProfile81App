@@ -2,28 +2,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cl.gob.tgr.monex</groupId>
-	<artifactId>segSecurityProfile81App</artifactId>
-	<version>1.0.0</version>
-	<packaging>ear</packaging>
 	
-	<repositories>
-		<repository>
-			<id>maven-group</id>
-			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
-		</repository>
-	</repositories>
-  
-  	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>hhttp://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
-		</repository>
-	</distributionManagement>
+	<parent>
+		<groupId>cl.tesoreria.seguridad</groupId>
+		<artifactId>segSecurityProfile81</artifactId>
+		<version>2.0.0.0</version>
+	</parent>
+	
+	<groupId>cl.tesoreria.seguridad</groupId>
+	<artifactId>segSecurityProfile81App</artifactId>
+	<packaging>ear</packaging>
 	
 	
 	<build>
@@ -56,15 +44,21 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>cl.gob.tgr.monex</groupId>
+			<groupId>cl.tesoreria.seguridad.profile</groupId>
+			<artifactId>UserDocuments</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>cl.tesoresia.seguridad.profile</groupId>
 			<artifactId>PkgSeguridadIntranetEJB3</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>cl.gob.tgr.monex</groupId>
 			<artifactId>SegFacadeIntranetEJB3</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
 			<type>ejb</type>
 		</dependency>
 	</dependencies>

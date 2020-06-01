@@ -1,26 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>cl.gob.tgr.monex</groupId>
-  <artifactId>UserDocuments</artifactId>
-  <version>1.0.0</version>
-  
-	<repositories>
-		<repository>
-			<id>maven-group</id>
-			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
-		</repository>
-	</repositories>
-  
-  	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>hhttp://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://ec2-3-229-82-198.compute-1.amazonaws.com:8081/artifactory/tesoreria-releases</url>
-		</repository>
-	</distributionManagement>
+
+	<parent>
+		<groupId>cl.tesoreria.seguridad</groupId>
+		<artifactId>segSecurityProfile81</artifactId>
+		<version>2.0.0.0</version>
+	</parent>
+
+	<groupId>cl.tesoreria.seguridad.profile</groupId>
+	<artifactId>UserDocuments</artifactId>
+	<packaging>jar</packaging>
+
   
   <build>
   <finalName>UserDocuments</finalName>
@@ -43,6 +33,5 @@
         </configuration>
       </plugin>
     </plugins>
-
   </build>
 </project>
